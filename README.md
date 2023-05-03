@@ -1,27 +1,32 @@
 # Comps
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.7.
 
-## Development server
+learning intensifies!!!!
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+steps:
 
-## Code scaffolding
+```bash
+ng g m <Module name>
+ng g c <Module name>/<Component name>
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+export it to the other modules u'd need to add it to the app module
 
-## Build
+1. export the component from the <module name>.module.ts
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```js
+...
+,
+  exports: [
+    ElementsHomeComponent
+  ]
+```
+in the imports section in the appmodule u import the module housing the component u want
 
-## Running unit tests
+```js
+imports: [
+    ...,
+    ElementsModule
+]
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```
