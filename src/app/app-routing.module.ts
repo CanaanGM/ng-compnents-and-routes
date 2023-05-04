@@ -12,15 +12,15 @@ const routes: Routes = [
   },
   {
     path: "collections",
-    loadChildren: () => import("./collections/collections-routing.module").then(x =>x.CollectionsRoutingModule)
+    loadChildren: () => import("./collections/collections.module").then(x =>x.CollectionsModule)
   },
   {
     path: "views",
-    loadChildren: () => import("./views/views-routing.module").then(m=> m.ViewsRoutingModule)
+    loadChildren: () => import("./views/views.module").then(m=> m.ViewsModule)
   },
   {
     path: "mods",
-    loadChildren: () => import("./mods/mods-routing.module").then( m=> m.ModsRoutingModule) 
+    loadChildren: () => import("./mods/mods.module").then( m=> m.ModsModule) 
   },
   {path:"", component: HomeComponent },
   {path: "**", component: NotFoundComponent}

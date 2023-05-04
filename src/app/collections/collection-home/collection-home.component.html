@@ -1,1 +1,11 @@
-<p>collection-home works!</p>
+<div>
+    <app-table  classNames="striped celled" [data]="data" [headers]="headers"></app-table>
+</div>
+
+<app-divider  >Tab menu</app-divider>
+<app-tabs>
+    <a [routerLinkActiveOptions]="{exact:true}" class="item" routerLinkActive="active" [routerLink]="['./']"> Biography</a>
+    <a class="item" routerLinkActive="active" [routerLink]="['./','companies']"> Companies</a>
+    <a class="item" routerLinkActive="active" [routerLink]="['./','partners']"> Partners</a>
+    
+</app-tabs>
