@@ -1,1 +1,14 @@
-<p>mods-home works!</p>
+<app-divider>Modal</app-divider>
+
+<button (click)="showModel()" >Show modal</button>
+<app-modal  (close)="showModel()" *ngIf="show">
+    <div modalTitle> Title</div>
+    <p>Im hella tired, can't think</p>
+
+    <!-- <div modalFooter>
+        <button class="ui button" (click)="showModel()" >OkAy!</button>
+    </div> -->
+</app-modal>
+
+<app-divider>Accordion</app-divider>
+<app-accordion [data]="toDisplayOnAccordion"></app-accordion>
