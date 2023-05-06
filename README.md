@@ -67,3 +67,9 @@ from the parent template
 ```html
 <app-accordion [data]="toDisplayOnAccordion"></app-accordion>
 ```
+
+## adding a class depending on a thing
+
+```html
+< [ngClass]="{active: i === openedItemIndex}>  </>"
+```
